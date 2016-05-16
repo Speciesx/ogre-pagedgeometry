@@ -1,3 +1,5 @@
 syntax: glob
 build/
 lib/
+/build_x86/CMakeFiles
+/build_x86

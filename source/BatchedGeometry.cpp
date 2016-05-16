@@ -31,6 +31,7 @@ Permission is granted to anyone to use this software for any purpose, including 
 #include <OgreMaterialManager.h>
 #include <OgreMaterial.h>
 #include <string>
+#include <OgreTechnique.h>
 
 #include "BatchedGeometry.h"
 #include "PagedGeometry.h"

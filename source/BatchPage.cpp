@@ -22,6 +22,7 @@ Permission is granted to anyone to use this software for any purpose, including 
 #include <OgreHighLevelGpuProgram.h>
 #include <OgreHighLevelGpuProgramManager.h>
 #include <OgreLogManager.h>
+#include <OgreTechnique.h>
 
 #include "BatchPage.h"
 #include "BatchedGeometry.h"
@@ -230,7 +231,7 @@ void BatchPage::_updateShaders()
 		}
 
 		//Compile the CG shader script based on various material / fade options
-		StringUtil::StrStreamType tmpName;
+		StringStream tmpName;
 		tmpName << "BatchPage_";
 		if (m_bFadeEnabled)
 			tmpName << "fade_";
@@ -462,7 +463,7 @@ void BatchPage::_updateShaders()
 		}
 
 		//Now that the shader is ready to be applied, apply it
-		StringUtil::StrStreamType materialSignature;
+		StringStream materialSignature;
 		materialSignature << "BatchMat|";
 		materialSignature << ptrMat->getName() << "|";
 		if (m_bFadeEnabled)

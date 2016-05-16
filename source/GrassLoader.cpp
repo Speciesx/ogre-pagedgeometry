@@ -37,6 +37,8 @@ Permission is granted to anyone to use this software for any purpose, including 
 #include "RandomTable.h"
 
 #include <limits> //for numeric_limits
+#include <OgreSceneNode.h>
+#include <OgreTechnique.h>
 
 using namespace Ogre;
 
@@ -1108,7 +1110,7 @@ void GrassLayer::_updateShaders()
 			//before the page center is out of range.
 
 			//Generate a string ID that identifies the current set of vertex shader options
-			StringUtil::StrStreamType tmpName;
+			StringStream tmpName;
 			tmpName << "GrassVS_";
 			if (animate)
 				tmpName << "anim_";
